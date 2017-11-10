@@ -32,15 +32,16 @@ namespace MultiShardMarsError
                             }
                             catch (Exception e)
                             {
+
                                 if (e.ToString().Contains("MultipleActiveResultSets"))
                                 {
-                                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                                    Console.WriteLine(">>>>>>>>" );
                                     Console.WriteLine(e.ToString());
-                                    Console.ResetColor();
+                                    Console.WriteLine("<<<<<<<<");
                                     throw;
                                 }
 
-                                Console.WriteLine(e.ToString());
+                                Console.WriteLine(e.ToString());                               
                             }
                         }
                     })).ToList();
