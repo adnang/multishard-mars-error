@@ -46,6 +46,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,8 +55,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HealthcheckDatabaseQuery.cs" />
+    <Compile Include="IMultiShardCommandExecutor.cs" />
+    <Compile Include="IMultiShardConnectionFactory .cs" />
+    <Compile Include="IMultiShardDatabaseQuery.cs" />
+    <Compile Include="MultiShardCommandExecutor.cs" />
+    <Compile Include="MultiShardConnectionFactory.cs" />
+    <Compile Include="MultiShardDatabaseQueryExecutor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetryingMultiShardCommandExecutor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
